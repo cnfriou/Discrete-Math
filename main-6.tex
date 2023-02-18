@@ -1,0 +1,76 @@
+\documentclass{article}
+\renewcommand{\baselinestretch}{1.5} 
+
+\title{Homework 9 - Counting  (Fall 2018)}
+\author
+{
+Name: Claire Friou
+\and UNI: cnf2109
+}
+
+
+\begin{document}
+    \maketitle
+    
+    \section{Anagrams}
+$\frac{10!}{3!2!2!} \\
+= \frac{10*9*8*7*6*5*4}{2!2!} \\
+= \frac{604800}{4} \\
+= 151,200$ different anagrams
+
+    \newpage
+    \section{Inclusion-Exclusion}
+A = Group 1, B = Group 2, C = Group 3, D = Group 4\\
+\\*
+$|A| + |B| + |C| + |D|$\\
+$- |A \cap B| - |A \cap C| - |A \cap D| - |B \cap C| - |B \cap D| - |C \cap D|$\\
+$+ |A \cap B \cap C| + |A \cap B \cap D| + |A \cap C \cap D| + |B \cap C \cap D|$\\
+$- |A \cap B \cap C \cap D|\\$
+\\*
+= 1000 + 1000 + 1000 + 1000\\
+- 100 - 100 - 100 - 100 -100 - 100\\
++ 10 + 10 + 10 + 10\\
+- 1\\
+\\*
+= 4000 - 600 + 40 - 1\\
+\\*
+= 3,439 people total
+
+    \newpage    
+    \section{Binomial Coefficients}
+1. $x^4y^2$ in 4$(x+y)^6$\\
+n = 6, ${6\choose k} x^{6-k}y^{k}$, to get $x^4y^2$, set k = 2\\
+${6\choose 2} x^{6-2}y^{2}$\\
+${6 \choose 2}(x)^4(y)^2$\\
+Coefficient = ${6 \choose 2} = 15$\\
+\\*
+2. $x^{26}$ in $(x+5)^{40}$\\
+n = 40, ${40 \choose k}x^{40-k}(5)^k$, to get $x^{26}$, set k = 14\\
+${40 \choose 14}x^{26}(5)^{14}$\\
+Coefficient = ${40 \choose 14}*5^{14}$\\
+\\*
+3. $y^8$ in $(2y-1)^{20}$\\
+n = 20, ${20 \choose k}$, to get $y^8$, set k = 12\\
+${20 \choose 12}(2y)^{8}(-1)^{12}$\\
+Coefficient = ${20 \choose 12}*2^8*1$ = ${20 \choose 12}*256$
+\newpage
+    \section{Binomial Coefficients}
+$a^3b^3c^3d^3$ in $(a+b+c+d)^{12}$\\
+x = a+b\\
+y = c+d\\
+$(a+b+c+d)^{12} = (x+y)^{12}$\\
+n = 12, ${12 \choose k}x^{12-k}y^k$, set k = 6\\
+${12 \choose 6}x^6y^6$\\
+=${12 \choose 6}(a+b)^6(c+d)^6$\\    
+=${12 \choose 6}a^3b^3c^3d^3$\\
+Coefficient = ${12 \choose 6}$ = 924
+
+    \newpage
+    \section{}
+1. 20!\\
+Justification: We are arranging 20 people in a line. The formula to compute this function is $P_n = n!$.\\
+2. (20-1)! = 19!\\
+Justification: To compute a circular permutation, the formula is $P_n = (n-1)!$. In this case n=20.
+        
+  
+   \end{document}
